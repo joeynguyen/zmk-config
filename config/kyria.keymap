@@ -21,18 +21,18 @@
 #define TAB_RT      LC(TAB) // tab right
 #define TAB_LT      LC(LS(TAB)) // tab left
 
-#define SC_GRV      LS(LC(GRAVE))
-#define SC_BSLH     RS(RC(BSLH))
-#define AC_Q        LA(LC(Q))
-#define AC_P        RA(RC(P))
-#define GC_W        LG(LC(W))
-#define GC_O        RG(RC(O))
-#define GA_E        LG(LA(E))
-#define GA_I        RG(RA(I))
-#define GS_R        LG(LS(R))
-#define GS_U        RG(RS(U))
-#define AS_T        LA(LS(T))
-#define AS_Y        RA(RS(Y))
+#define L_SC        LS(LEFT_CONTROL)
+#define R_SC        RS(RIGHT_CONTROL)
+#define L_AC        LA(LEFT_CONTROL)
+#define R_AC        RA(RIGHT_CONTROL)
+#define L_GC        LG(LEFT_CONTROL)
+#define R_GC        RG(RIGHT_CONTROL)
+#define L_GA        LG(LEFT_ALT)
+#define R_GA        RG(RIGHT_ALT)
+#define L_GS        LG(LEFT_SHIFT)
+#define R_GS        RG(RIGHT_SHIFT)
+#define L_AS        LA(LEFT_SHIFT)
+#define R_AS        RA(RIGHT_SHIFT)
 
 #define SPECIAL     LC(LA(LG(SPACE))) // Hold Left Control, Alt and GUI and press Space
 
@@ -86,15 +86,15 @@
         default_layer {
             label = "DEF";
             bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                                  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp SC_GRV     &kp AC_Q      &kp GC_W      &kp GA_E      &kp GS_R      &kp AS_T                                                                          &kp AS_Y     &kp GS_U      &kp GA_I      &kp GC_O      &kp AC_P      &kp SC_BSLH
-// ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                                  ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &am LCTRL DEL   &kp A         &kp S         &kp D         &kp F         &kp G                                                                            &kp H         &kp J         &kp K         &kp L         &kp SEMI     &am RCTRL SQT
-// ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────────╮     ╭───────────────┬──────────────├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &mo MEDIA     &kp Z         &kp X         &kp C         &am LGUI V    &kp B         &kp TAB       &none                 &mo BLUETH      &kp RET        &kp N         &am RGUI M    &kp COMMA     &kp DOT       &kp FSLH      &kp MINUS
-// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤     ├───────────────├──────────────├─────────────├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &none       &as LSHFT LBKT  &kp SPACE    &am LALT ESC &lt RAISE TAB_LT      &lt LOWER TAB_RT &am RALT EQUAL  &kp BSPC    &as RSHFT RBKT  &kp SPECIAL
-//                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴───────────────╯     ╰───────────────┴──────────────┴─────────────┴─────────────┴─────────────╯
+// ╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                                  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &am L_SC GRAVE   &am L_AC Q    &am L_GC W    &am L_GA E    &am L_GS R    &am L_AS T                                                                       &am R_AS Y    &am R_GS U    &am R_GA I    &am R_GC O    &am R_AC P   &am R_SC BSLH
+// ├──────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                                  ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &am LCTRL DEL   &kp A         &kp S         &kp D         &kp F         &kp G                                                                            &kp H         &kp J         &kp K         &kp L         &kp SEMI     &am RCTRL SQT
+// ├──────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────────╮     ╭───────────────┬──────────────├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+      &mo MEDIA      &kp Z         &kp X         &kp C         &am LGUI V    &kp B         &kp TAB       &none                 &mo BLUETH      &kp RET        &kp N         &am RGUI M    &kp COMMA     &kp DOT       &kp FSLH      &kp MINUS
+// ╰──────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤     ├───────────────├──────────────├─────────────├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                 &none       &as LSHFT LBKT  &kp SPACE    &am LALT ESC &lt RAISE TAB_LT      &lt LOWER TAB_RT &am RALT EQUAL  &kp BSPC    &as RSHFT RBKT  &kp SPECIAL
+//                                            ╰─────────────┴─────────────┴─────────────┴─────────────┴───────────────╯     ╰───────────────┴──────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
 
