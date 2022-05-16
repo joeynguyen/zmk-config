@@ -18,21 +18,21 @@
 #define MEDIA    4
 
 // key aliases
-#define TAB_RT      LEFT_CONTROL(TAB) // tab right
-#define TAB_LT      LEFT_CONTROL(LEFT_SHIFT(TAB)) // tab left
+#define TAB_RT      LC(TAB) // tab right
+#define TAB_LT      LC(LS(TAB)) // tab left
 
-#define SC_GRV      LEFT_SHIFT(LEFT_CONTROL(GRAVE))
-#define SC_BSLH     RIGHT_SHIFT(RIGHT_CONTROL(BSLH))
-#define AC_Q        LEFT_ALT(LEFT_CONTROL(Q))
-#define AC_P        RIGHT_ALT(RIGHT_CONTROL(P))
-#define GC_W        LEFT_GUI(LEFT_CONTROL(W))
-#define GC_O        RIGHT_GUI(RIGHT_CONTROL(O))
-#define GA_E        LEFT_GUI(LEFT_ALT(E))
-#define GA_I        RIGHT_GUI(RIGHT_ALT(I))
-#define GS_R        LEFT_GUI(LEFT_SHIFT(R))
-#define GS_U        RIGHT_GUI(RIGHT_SHIFT(U))
-#define AS_T        LEFT_ALT(LEFT_SHIFT(T))
-#define AS_Y        RIGHT_ALT(RIGHT_SHIFT(Y))
+#define SC_GRV      LS(LC(GRAVE))
+#define SC_BSLH     RS(RC(BSLH))
+#define AC_Q        LA(LC(Q))
+#define AC_P        RA(RC(P))
+#define GC_W        LG(LC(W))
+#define GC_O        RG(RC(O))
+#define GA_E        LG(LA(E))
+#define GA_I        RG(RA(I))
+#define GS_R        LG(LS(R))
+#define GS_U        RG(RS(U))
+#define AS_T        LA(LS(T))
+#define AS_Y        RA(RS(Y))
 
 #define SPECIAL     LC(LA(LG(SPACE))) // Hold Left Control, Alt and GUI and press Space
 
