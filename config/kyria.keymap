@@ -14,8 +14,8 @@
 #define DEF      0
 #define LOWER    1
 #define RAISE    2
-#define BLUETH   3
-#define MEDIA    4
+#define MEDIA    3
+#define BLUETH   4
 
 // key aliases
 #define TAB_RT      LC(TAB) // tab right
