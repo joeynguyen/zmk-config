@@ -51,11 +51,20 @@
 
 / {
     behaviors {
+        adm: alpha_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_DOUBLE_MT";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         am: alpha_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -65,7 +74,7 @@
             label = "ALPHA_SFT";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -89,15 +98,15 @@
         default_layer {
             label = "DEF";
             bindings = <
-// ╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                                  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &am L_SC GRAVE   &am L_AC Q    &am L_GC W    &am L_GA E    &am L_GS R    &am L_AS T                                                                       &am R_AS Y    &am R_GS U    &am R_GA I    &am R_GC O    &am R_AC P   &am R_SC BSLH
-// ├──────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                                  ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &mt LCTRL DEL   &kp A         &kp S         &kp D         &kp F         &kp G                                                                            &kp H         &kp J         &kp K         &kp L         &kp SEMI     &mt RCTRL SQT
-// ├──────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────────╮     ╭───────────────┬──────────────├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &mo MEDIA      &kp Z         &kp X         &kp C         &mt LGUI V    &kp B         &kp TAB       &kp SPECIAL           &mo BLUETH      &kp RET        &kp N         &mt RGUI M    &kp COMMA     &kp DOT       &kp FSLH      &kp MINUS
-// ╰──────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤     ├───────────────├──────────────├─────────────├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &kp DESK_LT  &mt LSHFT LBKT  &kp SPACE    &mt LALT ESC &lt RAISE TAB_LT      &lt LOWER TAB_RT &mt RALT EQUAL  &kp BSPC    &mt RSHFT RBKT  &kp DESK_RT
-//                                            ╰─────────────┴─────────────┴─────────────┴─────────────┴───────────────╯     ╰───────────────┴──────────────┴─────────────┴─────────────┴─────────────╯
+// ╭───────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                                  ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬──────────────╮
+    &adm L_SC GRAVE  &adm L_AC Q   &adm L_GC W   &adm L_GA E   &adm L_GS R   &adm L_AS T                                                                      &adm R_AS Y   &adm R_GS U   &adm R_GA I   &adm R_GC O   &adm R_AC P  &adm R_SC BSLH
+// ├───────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                                  ├─────────────├─────────────┼─────────────┼─────────────┼────────────┼──────────────┤
+     &am LCTRL DEL    &kp A         &kp S         &kp D         &kp F         &kp G                                                                            &kp H         &kp J         &kp K         &kp L         &kp SEMI    &am RCTRL SQT
+// ├───────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────────╮     ╭───────────────┬──────────────├─────────────├─────────────┼─────────────┼─────────────┼────────────┼──────────────┤
+      &mo MEDIA       &kp Z         &kp X         &kp C         &am LGUI V    &kp B         &kp TAB       &kp SPECIAL           &mo BLUETH      &kp RET        &kp N         &am RGUI M    &kp COMMA     &kp DOT       &kp FSLH     &kp MINUS
+// ╰───────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤     ├───────────────├──────────────├─────────────├─────────────┼─────────────┼─────────────┴────────────┴──────────────╯
+                                                &kp DESK_LT  &mt LSHFT LBKT  &kp SPACE    &am LALT ESC &lt RAISE TAB_LT       &lt LOWER TAB_RT &am RALT EQUAL  &kp BSPC    &mt RSHFT RBKT  &kp DESK_RT
+//                                             ╰─────────────┴─────────────┴─────────────┴─────────────┴───────────────╯     ╰───────────────┴──────────────┴─────────────┴─────────────┴─────────────╯
             >;
         };
 
