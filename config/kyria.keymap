@@ -98,8 +98,9 @@
         default_layer {
             label = "DEF";
             bindings = <
+/* using R_GA for both sides because, in MacOS, L_Command+L_Option+J gets captured by something unknown */
 // ╭───────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                                  ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬──────────────╮
-    &adm L_SC GRAVE  &adm L_AC Q   &adm L_GC W   &adm L_GA E   &adm L_GS R   &adm L_AS T                                                                      &adm R_AS Y   &adm R_GS U   &adm R_GA I   &adm R_GC O   &adm R_AC P  &adm R_SC BSLH
+    &adm L_SC GRAVE  &adm L_AC Q   &adm L_GC W   &adm R_GA E   &adm L_GS R   &adm L_AS T                                                                      &adm R_AS Y   &adm R_GS U   &adm R_GA I   &adm R_GC O   &adm R_AC P  &adm R_SC BSLH
 // ├───────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                                  ├─────────────├─────────────┼─────────────┼─────────────┼────────────┼──────────────┤
      &am LCTRL DEL    &kp A         &kp S         &kp D         &kp F         &kp G                                                                            &kp H         &kp J         &kp K         &kp L         &kp SEMI    &am RCTRL SQT
 // ├───────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────────╮     ╭───────────────┬──────────────├─────────────├─────────────┼─────────────┼─────────────┼────────────┼──────────────┤
