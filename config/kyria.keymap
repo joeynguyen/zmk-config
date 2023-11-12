@@ -51,7 +51,7 @@
 
 / {
     behaviors {
-        adm: alpha_mods {
+        adm: alpha_double_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_DOUBLE_MT";
             #binding-cells = <2>;
