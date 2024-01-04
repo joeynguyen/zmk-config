@@ -98,7 +98,7 @@
  */
         default_layer {
             label = "DEF";
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>, <&inc_dec_kp C_VOL_DN C_VOL_UP>;
             bindings = <
 // ╭───────────────┬─────────────┬────────────┬────────────┬──────────────┬─────────────╮                                                              ╭──────────────┬─────────────┬─────────────┬────────────┬───────────────┬──────────────╮
      &am L_SC GRAVE  &am L_AC Q    &am L_GA W   &am L_GC E   &am L_GS R     &am L_AS T                                                                    &am R_AS Y     &am L_GS U    &am L_GC I    &am L_GA O  &am R_AC P      &am R_SC BSLH
