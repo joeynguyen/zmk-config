@@ -41,6 +41,10 @@
 
 #define SPECIAL     LC(LA(LG(SPACE))) // Hold Left Control, Alt and GUI and press Space
 
+&right_encoder {
+    status = "okay";
+};
+
 &mt {
     flavor = "hold-preferred";
     tapping-term-ms = <150>;
@@ -106,7 +110,6 @@
  */
         default_layer {
             label = "DEF";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
 // ╭───────────────────┬────────────┬────────────┬────────────┬─────────────┬───────────────╮                                                                      ╭─────────────────┬────────────┬────────────┬────────────┬────────────┬─────────────────╮
      &am L_SC GRAVE      &am L_AC Q   &am L_GA W   &am L_GC E   &am L_GS R    &am L_AS T                                                                             &am R_AS Y        &am L_GS U   &am L_GC I   &am L_GA O   &am R_AC P   &am R_SC BSLH
@@ -118,6 +121,8 @@
                                                    &kp C_MUTE   &kp LBKT      &am LSHFT TAB   &as LALT SPACE   &lt RAISE ESC         &lt LOWER RET   &as RALT BSPC   &am RSHFT EQUAL   &kp RBKT     &kp SPECIAL
 //                                               ╰────────────┴─────────────┴───────────────┴────────────────┴───────────────╯     ╰───────────────┴───────────────┴─────────────────┴────────────┴────────────╯
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
 /*
