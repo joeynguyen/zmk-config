@@ -6,13 +6,18 @@ include:
 #    shield: kyria_right
 #  - board: nice_nano_v2
 #    shield: settings_reset
-  # - board: nice_nano_v2
-  #   shield: kyria_rev3_left
-  # - board: nice_nano_v2
-  #   shield: kyria_rev3_right
+
+  # Kyria MX
   - board: nice_nano_v2
-    shield: kyria_rev3_left nice_view_adapter nice_view
+    shield: kyria_rev3_left
+    snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
-    shield: kyria_rev3_right nice_view_adapter nice_view
+    shield: kyria_rev3_right
+
+  # Kyria LP Choc
+  # - board: nice_nano_v2
+  #   shield: kyria_rev3_left nice_view_adapter nice_view
+  # - board: nice_nano_v2
+  #   shield: kyria_rev3_right nice_view_adapter nice_view
   # - board: nice_nano_v2
   #   shield: settings_reset
