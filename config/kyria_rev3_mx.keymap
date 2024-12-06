@@ -9,11 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-https://discord.com/channels/719497620560543766/1147076510541414471/1226868037278236712
+
+// https://discord.com/channels/719497620560543766/1147076510541414471/1226868037278236712
+// https://github.com/schmjop/zmk-config/blob/9a9640eabe1da341fb321a938070a003089d7c84/config/kyria.keymap
 // Encoders
 &sensors        { triggers-per-rotation = <30>; };
-&left_encoder   { steps = <30>; };
-&right_encoder  { steps = <30>; };
+&left_encoder   { steps = <60>; };
+&right_encoder  { steps = <60>; };
 
 // Layer aliases
 #define DEF      0
