@@ -1,25 +1,25 @@
 ---
 include:
-#  - board: nice_nano_v2
+#  - board: nice_nano@2.0.0
 #    shield: kyria_left
-#  - board: nice_nano_v2
+#  - board: nice_nano@2.0.0
 #    shield: kyria_right
-#  - board: nice_nano_v2
+#  - board: nice_nano@2.0.0
 #    shield: settings_reset
 
   # Kyria MX
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0
     shield: kyria_rev3_left nice_view_adapter nice_view
     # snippet: zmk-usb-logging
     # snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0
     shield: kyria_rev3_right nice_view_adapter nice_view
     # snippet: zmk-usb-logging
 
   # Kyria LP Choc
-  # - board: nice_nano_v2
+  # - board: nice_nano@2.0.0
   #   shield: kyria_rev3_left
-  # - board: nice_nano_v2
+  # - board: nice_nano@2.0.0
   #   shield: kyria_rev3_right
-  # - board: nice_nano_v2
+  # - board: nice_nano@2.0.0
   #   shield: settings_reset
